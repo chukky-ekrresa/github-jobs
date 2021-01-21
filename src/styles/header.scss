@@ -148,7 +148,7 @@
 			}
 
 			&:hover input ~ .checkmark {
-				background-color: #383838;
+				background-color: $color-violet;
 			}
 
 			input {
@@ -177,13 +177,13 @@
 				}
 			}
 
-			.checkmark:after {
-				left: 9px;
-				top: 5px;
-				width: 5px;
-				height: 10px;
+			.checkmark::after {
+				left: 10px;
+				top: 2px;
+				width: 7px;
+				height: 15px;
 				border: solid $color-light;
-				border-width: 0 3px 3px 0;
+				border-width: 0 2px 2px 0;
 				transform: rotate(45deg);
 			}
 
@@ -192,7 +192,7 @@
 				opacity: 1;
 			}
 
-			input:checked ~ .checkmark:after {
+			input:checked ~ .checkmark::after {
 				display: block;
 			}
 
@@ -212,10 +212,6 @@
 			img {
 				width: 1.6em;
 			}
-		}
-
-		.filter__metadata {
-			border-right: 1px solid #6e8098;
 		}
 	}
 }
