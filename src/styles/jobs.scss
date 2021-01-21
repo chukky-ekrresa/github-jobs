@@ -1,0 +1,64 @@
+.jobs {
+	display: grid;
+	grid-gap: 2em;
+	grid-template-columns: auto;
+	margin-top: 9em;
+	margin-bottom: 3em;
+}
+
+.card {
+	position: relative;
+	background: $color-light;
+	padding: 4em 2em;
+	max-width: 33em;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+
+	.card__tag {
+		width: 6.4em;
+		height: 6.2em;
+		border-radius: 31px;
+		position: absolute;
+		background: powderblue;
+		top: -50px;
+	}
+
+	.card__date {
+		color: $color-dark-grey;
+		font-size: 1.4rem;
+		font-weight: 300;
+		margin-bottom: 1em;
+		margin-top: 1.4em;
+	}
+
+	.card__title {
+		color: $color-dark-blue;
+		font-size: 1.9rem;
+		word-spacing: 4px;
+		letter-spacing: 0.4px;
+		text-transform: capitalize;
+		font-weight: 600;
+		margin-bottom: 1em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+	}
+
+	.card__company {
+		color: $color-dark-grey;
+		font-size: 1.4rem;
+		font-weight: 300;
+		text-transform: capitalize;
+		margin-bottom: 2em;
+	}
+
+	.card__location {
+		margin-top: auto;
+		color: $color-violet;
+		font-size: 1.4rem;
+		font-weight: 500;
+	}
+}
