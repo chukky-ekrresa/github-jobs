@@ -1,7 +1,7 @@
 .jobs {
 	display: grid;
-	grid-gap: 2em;
-	grid-template-columns: auto;
+	grid-gap: 6em 3em;
+	grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
 	margin-top: 9em;
 	margin-bottom: 3em;
 }
