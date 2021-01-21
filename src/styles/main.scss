@@ -1,0 +1,48 @@
+@import './variables.scss';
+@import './header.scss';
+
+*,
+*::before,
+*::after {
+	font-family: inherit;
+	font-size: inherit;
+	box-sizing: inherit;
+	text-decoration: none;
+	line-height: inherit;
+	// transition: all ease-in-out 250ms;
+}
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: $color-light-grey;
+	font-family: $primary-font;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	padding-left: 0;
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	object-fit: cover;
+}
+
+.container {
+	width: 100%;
+	max-width: 100em;
+	margin: 0 auto;
+	padding: 0 1em;
+}

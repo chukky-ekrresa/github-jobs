@@ -4,12 +4,53 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Document</title>
+		<title>
+			<%= htmlWebpackPlugin.options.title %>
+		</title>
 		<link rel="icon" href="./assets/favicon.ico">
+		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
+		<header class="header">
+			<div class="container header__row">
+				<img class="logo" src="./assets/logo.svg" alt="site logo">
+				<div class="switch">
+					<img src="./assets/icon-sun.svg" alt="">
+					<span class="toggle">
+						<input id="switch" type="checkbox" class="ui__checkbox">
+						<label for="switch" class="slider"></label>
+					</span>
+					<img src="./assets/icon-moon.svg" alt="">
+				</div>
+			</div>
+		</header>
 
+		<section class="container">
+			<section class="search">
+				<form class="form">
+					<div class="form__row title">
+						<img inline class="form__icon" src="src/assets/search.svg" alt="">
+						<input class="search__input" type="text" placeholder="Filter by title...">
+					</div>
+					<div class="form__row location">
+						<img inline class="form__icon" src="src/assets/location.svg" alt="">
+						<input class="search__input" type="text" placeholder="Filter by Location...">
+					</div>
+
+					<div class="form__row">
+						<label class="checkbox__container">
+							<span>Full time Only</span>
+							<input type="checkbox" name="">
+							<span class="checkmark"></span>
+						</label>
+						<button class="search__btn">
+							<img src="./assets/search.svg" alt="">
+						</button>
+					</div>
+				</form>
+			</section>
+		</section>
 	</body>
 
 </html>

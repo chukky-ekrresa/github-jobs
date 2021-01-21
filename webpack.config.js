@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { merge } = require('webpack-merge');
@@ -44,9 +45,17 @@ module.exports = ({ mode }) => {
 			plugins: [
 				new CleanWebpackPlugin(),
 				new webpack.ProgressPlugin(),
+				new HtmlWebpackInlineSVGPlugin({
+					runPreEmit: true,
+					svgoConfig: [
+						{
+							removeViewBox: false,
+						},
+					],
+				}),
 				new HtmlWebpackPlugin({
-					template: './src/index.html',
 					title: 'GitHub Jobs App',
+					template: './src/index.html',
 				}),
 				new CopyWebpackPlugin([{ from: './src/assets/', to: 'assets/' }]),
 			],
