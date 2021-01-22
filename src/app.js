@@ -17,28 +17,35 @@ async function fetchJobs() {
 fetchJobs()
 	.then(jobs => {
 		const jobsContainer = document.getElementById('jobs');
+		const jobsLoader = document.getElementById('jobs-loader');
+		const body = document.getElementById('homepage');
+		const jobTemplate = document.getElementById('job-template');
 		const jobsFragment = document.createDocumentFragment();
 
 		jobs.forEach(job => {
-			const jobTemplate = document.createElement('template');
-			const jobHtmlString = `<div class="card">
-					<div class="card__tag"></div>
-					<div class="card__date">
-						<span>${dayjs().to(dayjs(job.created_at))}</span>
-						<span>&#183;</span>
-						<span>${job.type}</span>
-					</div>
-					<h2 class="card__title">
-						${job.title}
-					</h2>
-					<div class="card__company">${job.company}</div>
-					<div class="card__location">${job.location}</div>
-				</div>`;
+			const clone = document.importNode(jobTemplate.content, true);
 
-			jobTemplate.innerHTML = jobHtmlString;
-			jobsFragment.appendChild(jobTemplate.content.firstChild);
+			const jobDate = clone.querySelector('#job-date');
+			const jobType = clone.querySelector('#job-type');
+			const jobLink = clone.querySelector('.job-url');
+
+			const cardTitle = clone.querySelector('.card__title');
+			const cardCompany = clone.querySelector('.card__company');
+			const cardImage = clone.querySelector('.card__tag');
+			const cardLocation = clone.querySelector('.card__location');
+
+			cardTitle.textContent = job.title;
+			cardCompany.textContent = job.company;
+			cardImage.src = job.company_logo;
+			cardLocation.textContent = job.location;
+			jobType.textContent = job.type;
+			jobDate.textContent = dayjs().to(dayjs(job.created_at));
+			jobLink.href = job.url;
+
+			jobsFragment.appendChild(clone);
 		});
 
+		body.removeChild(jobsLoader);
 		jobsContainer.appendChild(jobsFragment);
 	})
 	.catch(err => {

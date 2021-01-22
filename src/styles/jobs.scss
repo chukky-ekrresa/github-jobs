@@ -11,6 +11,7 @@
 	background: $color-light;
 	padding: 4em 2em;
 	max-width: 33em;
+	height: 100%;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
@@ -26,7 +27,7 @@
 
 	.card__date {
 		color: $color-dark-grey;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		font-weight: 300;
 		margin-bottom: 1em;
 		margin-top: 1.4em;
@@ -34,7 +35,7 @@
 
 	.card__title {
 		color: $color-dark-blue;
-		font-size: 1.9rem;
+		font-size: 1.7rem;
 		word-spacing: 4px;
 		letter-spacing: 0.4px;
 		text-transform: capitalize;
@@ -49,7 +50,7 @@
 
 	.card__company {
 		color: $color-dark-grey;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		font-weight: 300;
 		text-transform: capitalize;
 		margin-bottom: 2em;

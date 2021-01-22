@@ -11,7 +11,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 	</head>
 
-	<body>
+	<body id="homepage">
 		<header class="header">
 			<div class="container header__row">
 				<img class="logo" src="./assets/logo.svg" alt="site logo">
@@ -52,8 +52,30 @@
 			</section>
 		</section>
 
+
+		<div class="loader" id="jobs-loader">Loading...</div>
+
+
 		<section class="container">
 			<section class="jobs" id="jobs">
+				<template id="job-template">
+					<div>
+						<a href="#" class="job-url">
+							<div class="card">
+								<img class="card__tag" src="">
+								<div class="card__date">
+									<span id="job-date"></span>
+									<span>&#183;</span>
+									<span id="job-type"></span>
+								</div>
+								<h2 class="card__title">
+								</h2>
+								<div class="card__company"></div>
+								<div class="card__location"></div>
+							</div>
+						</a>
+					</div>
+				</template>
 			</section>
 		</section>
 	</body>
