@@ -13,7 +13,7 @@ module.exports = ({ mode }) => {
 	return merge(
 		{
 			mode,
-			entry: { app: './src/app.js' },
+			entry: { app: './src/app.js', job: './src/job/job.js' },
 			module: {
 				rules: [
 					{
@@ -59,6 +59,12 @@ module.exports = ({ mode }) => {
 				new HtmlWebpackPlugin({
 					title: 'GitHub Jobs App',
 					template: './src/index.html',
+					chunks: ['app'],
+				}),
+				new HtmlWebpackPlugin({
+					filename: 'job.html',
+					template: './src/job/job.html',
+					chunks: ['job'],
 				}),
 				new CopyWebpackPlugin([{ from: './src/assets/', to: 'assets/' }]),
 			],
