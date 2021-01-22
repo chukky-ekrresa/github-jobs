@@ -40,7 +40,7 @@ fetchJobs()
 			cardLocation.textContent = job.location;
 			jobType.textContent = job.type;
 			jobDate.textContent = dayjs().to(dayjs(job.created_at));
-			jobLink.href = job.url;
+			jobLink.href = '/job.html?job_id=' + job.id;
 
 			jobsFragment.appendChild(clone);
 		});
