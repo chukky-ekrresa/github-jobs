@@ -5,10 +5,61 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Github Job</title>
+		<link rel="icon" href="./assets/favicon.ico">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
+		<header class="header">
+			<div class="container header__row">
+				<a href="/">
+					<img class="logo" src="../assets/logo.svg" alt="site logo">
+				</a>
 
+				<div class="switch">
+					<img src="../assets/icon-sun.svg" alt="">
+					<span class="toggle">
+						<input id="switch" type="checkbox" class="ui__checkbox">
+						<label for="switch" class="slider"></label>
+					</span>
+					<img src="../assets/icon-moon.svg" alt="">
+				</div>
+			</div>
+		</header>
+
+		<section class="job__container" id="job-container">
+			<template id="job-template">
+				<div class="job__header">
+					<img src="" class="company__image" alt=""></img>
+					<div class="company__details">
+						<h2 class="company__title"></h2>
+						<a href="#" class="company__site" target="_blank" rel="noreferrer noopener">Company Site</a>
+					</div>
+				</div>
+
+				<div class="job__details">
+					<div class="job__date">
+						<span id="job-date"></span>
+						<span class="dot">&#183;</span>
+						<span id="job-type"></span>
+					</div>
+					<div class="job__title"></div>
+					<div class="job__location"></div>
+
+					<div class="job__description">
+					</div>
+
+				</div>
+
+				<div class="how__to__apply">
+					<h3 class="title">How to Apply</h3>
+					<div class="apply__text"></div>
+				</div>
+			</template>
+		</section>
+
+		<script src="https://cdn.jsdelivr.net/gh/jitbit/HtmlSanitizer@master/HtmlSanitizer.js"></script>
 	</body>
 
 </html>
