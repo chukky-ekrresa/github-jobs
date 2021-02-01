@@ -51,6 +51,11 @@ img {
 .loader {
 	font-size: 2rem;
 	text-align: center;
+	display: none;
+}
+
+.loader.show {
+	display: block;
 }
 
 .dot {

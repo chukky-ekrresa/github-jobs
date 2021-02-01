@@ -6,9 +6,8 @@
   "license": "MIT",
   "scripts": {
     "webpack": "webpack",
-    "start:dev": "webpack-dev-server",
     "prod": "yarn webpack --env.mode production",
-    "dev": "yarn start:dev --env.mode development --hot"
+    "dev": "webpack-dev-server --env.mode development --hot"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

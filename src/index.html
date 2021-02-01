@@ -32,23 +32,23 @@
 
 		<section class="container">
 			<section class="search">
-				<form class="form">
+				<form class="form" id="search-form">
 					<div class="form__row title">
 						<img inline class="form__icon" src="src/assets/search.svg" alt="">
-						<input class="search__input" type="text" placeholder="Filter by title...">
+						<input class="search__input" name="description" placeholder="Filter by title...">
 					</div>
 					<div class="form__row location">
 						<img inline class="form__icon" src="src/assets/location.svg" alt="">
-						<input class="search__input" type="text" placeholder="Filter by Location...">
+						<input class="search__input" name="location" type="text" placeholder="Filter by Location...">
 					</div>
 
 					<div class="form__row">
 						<label class="checkbox__container">
 							<span>Full time Only</span>
-							<input type="checkbox" name="">
+							<input type="checkbox" name="full_time">
 							<span class="checkmark"></span>
 						</label>
-						<button class="search__btn">
+						<button id="search-btn" class="search__btn" type="submit">
 							<img src="./assets/search.svg" alt="">
 						</button>
 					</div>
@@ -56,7 +56,6 @@
 			</section>
 		</section>
 
-		<div class="loader" id="jobs-loader">Loading...</div>
 
 		<section class="container">
 			<section class="jobs" id="jobs">
@@ -79,6 +78,9 @@
 					</div>
 				</template>
 			</section>
+
+			<div class="loader" id="jobs-loader">Loading...</div>
+			<div id="infinite-scroll-trigger"></div>
 		</section>
 	</body>
 
